@@ -1,0 +1,338 @@
+{
+  "metadata": {
+    "skillName": "research-frameworks",
+    "version": "1.0.0",
+    "lastUpdated": "2026-04-01",
+    "domain": "backend-apis",
+    "case": "RESTful API Framework Selection"
+  },
+  "briefing": {
+    "caseOfUse": "Construir API REST scalable con equipo de 2 devs, timeline 3 meses",
+    "constraints": {
+      "teamSize": 2,
+      "timeline": "3 months",
+      "budget": "open-source",
+      "compatibility": ["PostgreSQL", "Docker"]
+    },
+    "priorities": {
+      "learningCurve": 0.20,
+      "communitySupport": 0.20,
+      "activeMainenance": 0.15,
+      "performance": 0.15,
+      "scalability": 0.15,
+      "ecosystem": 0.10,
+      "documentation": 0.05
+    }
+  },
+  "frameworks": [
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "language": "Python",
+      "type": "Micro-framework",
+      "releaseDate": "2018",
+      "latestVersion": "0.104.1",
+      "scores": {
+        "learningCurve": 9,
+        "communitySupport": 8,
+        "activeMaintenance": 9,
+        "performance": 9,
+        "scalability": 8,
+        "ecosystem": 7,
+        "documentation": 9
+      },
+      "weighted_score": 8.45,
+      "pros": [
+        "Documentación excepcionalmente clara",
+        "Async/await nativo - rendimiento HTTP superior",
+        "Validación automática con Pydantic",
+        "OpenAPI/Swagger generado automáticamente",
+        "Perfecta para startup small/mid-size",
+        "Aprendizaje rápido (1-2 semanas)"
+      ],
+      "cons": [
+        "Ecosistema más pequeño que Django",
+        "Menos cookbooks para problemas específicos",
+        "ORM requires external (SQLAlchemy)",
+        "Comunidad más joven, aunque crece rápido"
+      ],
+      "community": {
+        "githubStars": 71000,
+        "githubIssues": "~100 open",
+        "discordMembers": "20k+",
+        "lastCommit": "2024-11",
+        "maintenanceActivity": "very-active"
+      },
+      "examples": [
+        {
+          "name": "Basic API with Auth",
+          "complexity": "beginner",
+          "repo": "github.com/tiangolo/fastapi/examples"
+        },
+        {
+          "name": "Production Ready with Postgres",
+          "complexity": "intermediate",
+          "repo": "github.com/full-stack-python/modern-python-start"
+        }
+      ],
+      "recommendedFor": [
+        "Small/Medium teams (<10 devs)",
+        "Tight timeline (1-3 months)",
+        "New projects with async needs",
+        "Microservices architecture"
+      ],
+      "notRecommendedFor": [
+        "Large monolithic apps",
+        "Teams needing batteries-included ORM",
+        "Legacy Python 2 support"
+      ],
+      "migrationCost": "low",
+      "references": [
+        "https://fastapi.tiangolo.com/",
+        "https://reddit.com/r/Python/search?q=fastapi",
+        "https://dev.to/t/fastapi"
+      ]
+    },
+    {
+      "id": "django-rest",
+      "name": "Django REST Framework",
+      "language": "Python",
+      "type": "Full-stack Framework",
+      "releaseDate": "2011 (Django), 2011 (DRF)",
+      "latestVersion": "3.14.0 (DRF)",
+      "scores": {
+        "learningCurve": 6,
+        "communitySupport": 10,
+        "activeMaintenance": 9,
+        "performance": 7,
+        "scalability": 8,
+        "ecosystem": 10,
+        "documentation": 9
+      },
+      "weighted_score": 8.30,
+      "pros": [
+        "Enorme ecosistema (miles de packages)",
+        "ORM poderoso incluido (Django ORM)",
+        "Admin panel generado automáticamente",
+        "Authentication/Permissions robustas",
+        "Documentación abundante y madura",
+        "Comunidad MASIVA (fácil encontrar soluciones)"
+      ],
+      "cons": [
+        "Curva de aprendizaje más pronunciada",
+        "Setup inicial más complejo",
+        "Performance inferior a FastAPI (sync por defecto)",
+        "Overhead para APIs simples"
+      ],
+      "community": {
+        "githubStars": 28000,
+        "githubIssues": "~200 open",
+        "discordMembers": "50k+",
+        "lastCommit": "2024-11",
+        "maintenanceActivity": "very-active"
+      },
+      "examples": [
+        {
+          "name": "Simple CRUD API",
+          "complexity": "beginner",
+          "repo": "github.com/encode/django-rest-framework/examples"
+        },
+        {
+          "name": "Auth + Permissions Complex",
+          "complexity": "advanced",
+          "repo": "github.com/django-rest-framework/django-rest-framework"
+        }
+      ],
+      "recommendedFor": [
+        "Medium to Large teams (5+ devs)",
+        "Need for admin panel",
+        "Complex permission systems",
+        "Scaling over time"
+      ],
+      "notRecommendedFor": [
+        "Performance-critical systems",
+        "Tight timelines",
+        "Small prototypes"
+      ],
+      "migrationCost": "medium",
+      "references": [
+        "https://www.django-rest-framework.org/",
+        "https://reddit.com/r/django",
+        "https://dev.to/t/django"
+      ]
+    },
+    {
+      "id": "flask-connexion",
+      "name": "Flask + Connexion",
+      "language": "Python",
+      "type": "Micro-framework Stack",
+      "releaseDate": "2010 (Flask), 2015 (Connexion)",
+      "latestVersion": "3.0 (Flask), 2.14 (Connexion)",
+      "scores": {
+        "learningCurve": 8,
+        "communitySupport": 8,
+        "activeMaintenance": 8,
+        "performance": 7,
+        "scalability": 7,
+        "ecosystem": 8,
+        "documentation": 7
+      },
+      "weighted_score": 7.60,
+      "pros": [
+        "Extremadamente flexible - eres tú quien decide",
+        "Minimal overhead - solo lo que necesitas",
+        "Conexion: OpenAPI/Swagger automático",
+        "Excelente para APIv1 → v2 transitions",
+        "Muchos tutoriales y ejemplos online"
+      ],
+      "cons": [
+        "Flexibilidad = más decisiones a tomar",
+        "Necesitas integrar: ORM, auth, etc manualmente",
+        "Performance no es el fuerte",
+        "Soporte oficial de Connexion menos activo"
+      ],
+      "community": {
+        "githubStars": 67000,
+        "githubIssues": "~150 open",
+        "discordMembers": "30k+ (Flask community)",
+        "lastCommit": "2024-10",
+        "maintenanceActivity": "active"
+      },
+      "examples": [
+        {
+          "name": "Simple REST with Connexion",
+          "complexity": "beginner",
+          "repo": "github.com/zalando/connexion/examples"
+        }
+      ],
+      "recommendedFor": [
+        "Developers who like flexibility",
+        "API gateway/middleware scenarios",
+        "Legacy Flask apps needing modernization",
+        "Educational purposes"
+      ],
+      "notRecommendedFor": [
+        "Need everything batteries-included",
+        "Team without Python expertise"
+      ],
+      "migrationCost": "medium",
+      "references": [
+        "https://flask.palletsprojects.com/",
+        "https://connexion.readthedocs.io/",
+        "https://reddit.com/r/flask"
+      ]
+    }
+  ],
+  "decisionTree": {
+    "root": {
+      "question": "¿Cuánto tiempo tienes?",
+      "options": [
+        {
+          "condition": "< 3 months",
+          "next_node": "small_team_fast",
+          "recommendation": "FastAPI"
+        },
+        {
+          "condition": "> 6 months",
+          "next_node": "consider_ecosystem",
+          "recommendation": "Django REST"
+        }
+      ]
+    },
+    "small_team_fast": {
+      "question": "¿Necesitas admin panel automático?",
+      "options": [
+        {
+          "condition": "Yes",
+          "recommendation": "Django REST (re-evaluate timeline)"
+        },
+        {
+          "condition": "No",
+          "recommendation": "FastAPI ✓ Recommended"
+        }
+      ]
+    },
+    "consider_ecosystem": {
+      "question": "¿Necesitas muchas integraciones?",
+      "options": [
+        {
+          "condition": "Yes",
+          "recommendation": "Django REST (miles de packages)"
+        },
+        {
+          "condition": "No",
+          "recommendation": "FastAPI (performance > ecosystem)"
+        }
+      ]
+    }
+  },
+  "adoptionRoadmap": {
+    "framework": "FastAPI",
+    "week_1_2": {
+      "focus": "Fundamentals",
+      "tasks": [
+        "Setup + Hello World",
+        "Path parameters & query params",
+        "Request/response models",
+        "Basic routing"
+      ],
+      "timeCommit": "3h/day"
+    },
+    "week_3_4": {
+      "focus": "Small Project",
+      "tasks": [
+        "Database integration (SQLAlchemy)",
+        "CRUD operations",
+        "Basic error handling"
+      ],
+      "timeCommit": "4h/day"
+    },
+    "week_5_6": {
+      "focus": "Scaling",
+      "tasks": [
+        "Authentication/Authorization",
+        "Middleware",
+        "Testing"
+      ],
+      "timeCommit": "5h/day"
+    }
+  },
+  "riskAssessment": {
+    "fastapi": {
+      "risk": "low",
+      "factors": [
+        "Comunidad crece rápidamente",
+        "Creador (Sebastián Ramírez) comprometido",
+        "Usado por empresas grandes (Microsoft, Uber)"
+      ]
+    },
+    "django_rest": {
+      "risk": "very-low",
+      "factors": [
+        "20+ años en producción",
+        "Soporte corporativo (Django Software Foundation)"
+      ]
+    }
+  },
+  "benchmarks": {
+    "requestsPerSecond": {
+      "fastapi": 12500,
+      "django_rest": 3500,
+      "flask_connexion": 4200,
+      "method": "wrk -t4 -c100 -d30s"
+    },
+    "memoryUsage": {
+      "fastapi": "~45MB",
+      "django_rest": "~85MB",
+      "flask_connexion": "~55MB"
+    }
+  },
+  "verdict": {
+    "primary": "FastAPI",
+    "primary_reason": "Timeline 3 meses, team pequeño, performance matters",
+    "secondary": "Django REST",
+    "secondary_reason": "Si necesitas admin panel o creces a 10+ devs",
+    "fallback": "Flask + Connexion",
+    "fallback_reason": "Si necesitas máxima flexibilidad"
+  }
+}
