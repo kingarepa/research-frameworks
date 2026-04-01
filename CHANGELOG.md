@@ -159,5 +159,5 @@ MIT License - Libre para usar, modificar, distribuir
 ---
 
 **Última actualización**: Abril 2026  
-**Mantenedor**: Wei (Weiming Chu)  
+**Mantenedor**: Kingarepa
 **Estado**: Mantenimiento activo
