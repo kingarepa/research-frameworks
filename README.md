@@ -209,31 +209,6 @@ Esta Skill fue construida usando:
 
 ---
 
-## 🔗 Integración con Tus Proyectos
-
-### Para Bamboo
-```
-Investiga herramientas de automatización para gestión de vending machines
-PERO integración fácil con WhatsApp + Google Sheets
-PERO presupuesto < $500/mes
-```
-
-### Para BAMI
-```
-Investiga plataformas para multi-channel bot deployment
-PERO WhatsApp, Instagram, Facebook Marketplace
-PERO payment gateway externo
-```
-
-### Para GWOP Consulting
-```
-Investiga soluciones de transformación digital para gobiernos locales
-PERO open-source o < $1000/mes
-PERO documentación en español/inglés
-```
-
----
-
 ## 🛠️ Uso Avanzado
 
 ### Cambiar Profundidad
@@ -352,4 +327,4 @@ Usa para elegir frameworks, evaluar alternativas, o validar decisiones.
 **Estado**: ✅ Producción  
 **Versión**: 1.0.0  
 **Última actualización**: Abril 2026  
-**Mantenedor**: Wei (Weiming Chu)
+**Mantenedor**: KingArepa
